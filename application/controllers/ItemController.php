@@ -18,7 +18,7 @@ class ItemController extends CI_Controller{
 
     public function index()
     {
-        $data['kodeitem']= $this->ItemModel->AmbilData();
+        $data['item']= $this->ItemModel->AmbilData();
         $this->load->view('index', $data);
 
     }
@@ -31,7 +31,7 @@ class ItemController extends CI_Controller{
 
     public function store()
     {
-        $kode = $this->input->post('KodeItem');
+        $kode = $this->input->post('item');
         $nama = $this->input->post('NamaItem');
         $gambar = '';
 

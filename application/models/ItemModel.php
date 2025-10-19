@@ -7,32 +7,32 @@ class ItemModel extends CI_Model{
     public function AmbilData()
     {
         return
-        $this->db->get('kodeitem')->result();
+        $this->db->get('item')->result();
     }
 
     public function TambahData($data)
     {
         return
-        $this->db->insert('kodeitem', $data);
+        $this->db->insert('item', $data);
     }
 
     public function UbahData($kode, $data)
     {
         $this->db->where('kode', $kode);
         return
-        $this->db->update('kodeitem', $data);
+        $this->db->update('item', $data);
 
     }
 
     public function get_by_id($kode)
     {
         return
-        $this->db->get_where('kodeitem',$kode);
+        $this->db->get_where('item',$kode);
     }
 
     public function HapusData($kode)
     {
     return
-    $this->db->delete('kodeitem', ['list_sd' => $kode]);
+    $this->db->delete('item', ['list_sd' => $kode]);
     }
 }

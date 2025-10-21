@@ -22,6 +22,15 @@
     <label for="NamaItem">Nama Item</label>
     <input type="text" name="NamaItem" id="NamaItem" required>
 
+    <label for="idKategori">Pilih Kategori</label>
+    <!-- <pre><?php var_dump($kategori);?></pre> -->
+    <select name="idKategori" class="form-control">
+    <option value="">-- Pilih Kategori --</option>
+    <?php foreach ($kategori as $k): ?>
+        <option value="<?= $k->idKategori; ?>"><?= $k->NamaKategori; ?></option>
+    <?php endforeach; ?>
+</select>
+
     <label for="GambarItem">Gambar Item</label>
     <input type="file" name="GambarItem" id="GambarItem" >
 

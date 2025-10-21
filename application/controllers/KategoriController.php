@@ -18,7 +18,7 @@ class KategoriController extends CI_Controller{
 
     public function index(){
         $data['kategori'] = $this->KategoriModel->AmbilKategori();
-        $this->load->view('Kategori', $data);
+        $this->load->view('kategori', $data);
     }
 
     public function TambahKategori(){
@@ -37,7 +37,7 @@ class KategoriController extends CI_Controller{
     }
 
     public function edit($idKategori){
-        $data ['kategori'] = $this->KategoriModel->get_id_kategori($idKategori)->row();
+        $data ['kategori'] = $this->KategoriModel->get_kategori_by_id($idKategori)->row();
         $this->load->view('EditKategori', $data);
     }
 
